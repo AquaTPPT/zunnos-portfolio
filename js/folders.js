@@ -1,9 +1,10 @@
+const body = document.querySelector("body");
 const table = document.querySelector("table");
 const td = document.createElement("td");
+
+let filesContainer = [];
+
 table.appendChild(td);
-
-
-
 
 for (let i = 0; i < files.length; i++) {
     const div = document.createElement("div");
@@ -19,7 +20,12 @@ for (let i = 0; i < files.length; i++) {
 
     td.appendChild(div);
     div.appendChild(fileImg);
-    div.appendChild(fileDesc);
+    div.appendChild(fileDesc);    
     
-    fileImg.addEventListener("click", () => div.classList.toggle("selected"))
+    fileImg.addEventListener("click", function() { div.classList.add("selected");
+        if (div.classList.contains("selected") ) {
+            createWindow("something something");
+        } 
+    })
 }
+
