@@ -63,6 +63,7 @@ p, h1 {
 
 .icons {
     padding: 15px;
+    background-color: none;
 }
 
 .to-left {
@@ -80,6 +81,9 @@ p, h1 {
     justify-content: center;
 }
 
+.absolute {
+    position:absolute;
+}
 
 /*
 
