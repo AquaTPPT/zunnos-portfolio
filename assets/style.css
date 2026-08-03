@@ -631,10 +631,9 @@ hr{
   position: relative;
   width: 2em;
   height: 100%;
-  objec-fit: contain;
+  object-fit: contain;
   box-sizing: border-box;
   padding: .2em;
-  disply: inline-block;
   float: left;
 }
 

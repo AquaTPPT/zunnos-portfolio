@@ -1,4 +1,5 @@
-function createWindow(windowText, ytWindow = null) {
+function createWindow(windowText, url, ytWindow) {
+
     const wind = createElement("div");
     const titleBar = createElement("div", wind);
     const titleBarText = createElement("div", titleBar);
@@ -12,8 +13,7 @@ function createWindow(windowText, ytWindow = null) {
         windBody.appendChild(ytWindow);
     }
 
-    wind.classList = "window active";   
-    wind.style.width = "525px";
+    wind.classList = "window active";
     wind.style.position = "absolute"
 
     titleBar.classList = "title-bar";
@@ -67,14 +67,35 @@ function createWindow(windowText, ytWindow = null) {
     wind.ondragstart = function() {
         return false;
     };
+
+    wind.onmousedown = function(event) {
+
+        let windRightCorner = event.clientX + wind.getBoundingClientRect().right;
+        let windBottomCorner = event.clientY + wind.getBoundingClientRect().bottom;
+
+        console.log(windRightCorner);
+        console.log(windBottomCorner);
+
+        function resize(width, height) {
+            wind.style.width += width;
+            wind.style.height += height;
+        }
+
+        document.body.append(wind);
+
+        function onMouseMove(event) {
+            resize(windRightCorner, windBottomCorner);
+        }
+
+        document.addEventListener("mousemove", onMouseMove);
+    }
+
 };
 
 function createYtWindow(url) {
     const video = document.createElement("iframe");
 
     video.src = url;
-    video.style.width = "500px";
-    video.style.height = "315px";
     video.style.frameborder = "0";
     video.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
     video.allowfullscreen;

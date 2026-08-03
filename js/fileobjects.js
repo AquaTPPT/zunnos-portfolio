@@ -1,18 +1,32 @@
-const file1 = {
-    icon: "assets/icons/folder/colors/icon_folder_purple.png",
-    name: "ps2 spinning",
-    type: "gif",
-};
-
-const file2 = {
-    icon: "assets/icons/folder/colors/icon_folder_purple.png",
-    name: "count binface CNN interview",
-    url: "https://www.youtube.com/embed/3XO3FwWfPLc?si=jjJF1frsFMk2LUi1",
-    type: "yt",
-}
-
 const icons = {
-    purple: "assets/icons/folder/colors/icon_folder_purple.png",
+    folder: {purple: "assets/icons/folder/colors/icon_folder_purple.png",
+            },
+    desktop: { movieBaloon: "assets/icons/movie-baloon.png",
+    },
 };
 
-let files = [file1, file2];
+const files = {
+    file1: { 
+        icon: icons.folder.purple,
+        name: "ps2 spinning",
+        type: "gif"
+    },
+    file2: {
+        icon: icons.desktop.movieBaloon,
+        name: "MODARN",
+        url: "https://www.youtube.com/embed/W3fhAdN1J_E",
+        type: "yt"
+    },
+    file3: {
+        icon: icons.desktop.movieBaloon,
+        name: "ADVENTURA",
+        url: "https://www.youtube.com/embed/_lI--gszA5s?feature=share",
+        type: "yt"
+    },
+    file4: {
+        icon: icons.desktop.movieBaloon,
+        name: "OBJETO 708",
+        url: "https://www.youtube.com/embed/ZYakVz38Ros",
+        type: "yt"
+    }
+}
