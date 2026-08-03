@@ -1,0 +1,1 @@
+- fix the background (needs to have multiple res photos of the background)
