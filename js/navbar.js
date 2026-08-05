@@ -5,7 +5,7 @@ function navbarDate() {
     const date = createElement("p", navbarDateContainer);
 
     time.classList.add("navbartime");
-    date.classList.add("navbardate");
+    date.classList.add("navbardates");
 
     setInterval(function() {
         let currentDate = new Date();
@@ -32,5 +32,6 @@ function navbarDate() {
         date.textContent = day + "/" + month + "/" + year;
     }, 1000);
 }
+
 
 navbarDate();

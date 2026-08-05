@@ -1,4 +1,6 @@
-function createWindow(windowText, url, ytWindow) {
+
+
+function createWindow(width = 'fit-content', height = 'fit-content', windowText, url, ytWindow, text, type, menu, script) {
 
     const wind = createElement("div");
     const titleBar = createElement("div", wind);
@@ -8,6 +10,10 @@ function createWindow(windowText, url, ytWindow) {
     const max = createElement("button", titleBarControls);
     const close = createElement("button", titleBarControls);
     const windBody = createElement("div", wind);
+
+    windBody.style.width = width;
+    windBody.style.height = height;
+
 
     if (ytWindow != null) {
         windBody.appendChild(ytWindow);
@@ -47,6 +53,7 @@ function createWindow(windowText, url, ytWindow) {
         }
         // moves the wind at (pageX, pageY) coordinates
         // taking initial shifts into account
+
 
 
         function onMouseMove(event) {
@@ -90,11 +97,32 @@ function createWindow(windowText, url, ytWindow) {
         document.addEventListener("mousemove", onMouseMove);
     }
 
+    if (type == "app") {
+        script(windBody);
+    }
+
+    if (text != null) {
+        const textContainer = createElement('div', windBody);
+        const h1 = createElement("h1", textContainer);
+        const p = createElement("p", textContainer);
+        
+        textContainer.classList.add('window-text-container');
+        p.textContent = text;
+    }
+
 };
+
+function createVideoWindow() {
+    const video = document.createElement("video");
+    
+    video.href= '';
+}
 
 function createYtWindow(url) {
     const video = document.createElement("iframe");
 
+    video.style.width = '600px';
+    video.style.height = '300px';
     video.src = url;
     video.style.frameborder = "0";
     video.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
