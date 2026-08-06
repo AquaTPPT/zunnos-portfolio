@@ -92,6 +92,14 @@ p, h1 {
     flex: 1.8;
 }
 
+.startmenu-left-list-item {
+    display: flex;
+    justify-content: start;
+}
+.startmenu-left-list-item-img {
+    width: 32px;
+    height: 32px;
+}
 .startmenu-right-list {
     flex: 1;
 }

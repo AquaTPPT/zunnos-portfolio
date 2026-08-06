@@ -19,12 +19,22 @@ function initNavbar() {
         startMenuRightList.classList.add("startmenu-right-list");
         startMenu.classList.add("startmenu");
 
+        for (const item of Object.entries(navbarList)) {
+            let itemContainer = createElement("ul", startMenuLeftList);
+            
+            let itemImg = createElement("img", itemContainer);
+            let itemText = createElement("p", itemContainer);
 
+            itemContainer.classList.add("startmenu-left-list-item");
+            itemImg.classList.add("startmenu-left-list-item-img");
+
+            itemText.textContent = item[1].name;
+            itemImg.src = item[1].icon;
+        }
 
         return startMenu;
     }
 
-    startMenu();
 
     const flag = createElement("div", navbarSettingsContainer);
     const flagImg = createElement("img", flag);
@@ -58,6 +68,7 @@ function initNavbar() {
     volumeImg.src = "./assets/icons/navbar-icons/volume.png";
 
 
+    startMenu();
 
 }
 

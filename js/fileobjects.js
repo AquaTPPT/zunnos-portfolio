@@ -11,9 +11,40 @@ const icons = {
         explorer: "assets/icons/system/file-explorer.png",
         controlPanel: "assets/icons/system/control-panel.png",
         commandPrompt: "assets/icons/system/command-prompt.png",
-        defaultApps: "assets/icons/system/default-apps.png"
+        defaultApps: "assets/icons/system/default-apps.png",
+        internetExplorer: "assets/icons/system/internet-explorer.png"
     },
 };
+
+const navbarList = {
+  l1: { name: "Paint",
+        icon: icons.desktop.paint
+      },
+  l2: { name: "Notepad",
+        icon: icons.desktop.notepad
+      },
+  l3: { name: "Internet Explorer",
+        icon: icons.desktop.internetExplorer
+      },
+  l4: { name: "Windows Media Player",
+        icon: icons.desktop.mediaPlayer
+      },
+  l5: { name: "Calculator",
+        icon: icons.desktop.calculator
+      },
+  l6: { name: "Trash",
+        icon: icons.desktop.trash
+      },
+  l7: { name: "File Explorer",
+        icon: icons.desktop.explorer
+      },
+  l8: { name: "Control Panel",
+        icon: icons.desktop.controlPanel
+      },
+  l9: { name: "Command Prompt",
+        icon: icons.desktop.commandPrompt
+      },
+}
 
 const files = {
 
@@ -112,35 +143,7 @@ const navbarItems = {
     l9: "Help and Support"
 }
 
-const navbarList = {
-  l1: { name: "Paint",
-        icon: icons.desktop.paint
-      },
-  l2: { name: "Notepad",
-        icon: icons.desktop.notepad
-      },
-  l3: { name: "Windows Media Center",
-        icon: 
-      },
-  l4: { name: "Windows Media Player",
-        icon: icons.desktop.mediaPlayer
-      },
-  l5: { name: "Calculator",
-        icon: icons.desktop.calculator
-      },
-  l6: { name: "Trash",
-        icon: icons.desktop.trash
-      },
-  l7: { name: "File Explorer",
-        icon: icons.desktop.explorer
-      },
-  l8: { name: "Control Panel",
-        icon: icons.desktop.controlPanel
-      },
-  l9: { name: "Command Prompt",
-        icon: icons.desktop.commandPrompt
-      },
-}
+
 /*
 
 menu (place later):
