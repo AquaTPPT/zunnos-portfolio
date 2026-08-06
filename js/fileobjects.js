@@ -1,8 +1,17 @@
 const icons = {
     folder: {purple: "assets/icons/folder/colors/icon_folder_purple.png",
             },
-    desktop: { movieBaloon: "assets/icons/movie-baloon.png",
-        notepad: "assets/icons/notepad.png",
+    desktop: { movieBaloon: "assets/icons/system/movie-baloon.png",
+        notepad: "assets/icons/system/notepad.png",
+        myComputer: "assets/icons/system/computer.png",
+        mediaPlayer: "assetss/icons/system/media-player.png",
+        help: "assets/icons/system/help.png",
+        paint: "assets/icons/system/paint.png",
+        trash: "assets/icons/system/trash.png",
+        explorer: "assets/icons/system/file-explorer.png",
+        controlPanel: "assets/icons/system/control-panel.png",
+        commandPrompt: "assets/icons/system/command-prompt.png",
+        defaultApps: "assets/icons/system/default-apps.png"
     },
 };
 
@@ -20,8 +29,8 @@ const files = {
     file2: {
         icon: icons.desktop.movieBaloon,
         name: "MODARN",
-        url: "https://www.youtube.com/embed/W3fhAdN1J_E",
-        type: "yt",
+        url: "./assets/docs/videos/MODARN Short(1).mp4",
+        type: "video",
         column: 1,
         row: 2,
         description: "",
@@ -32,8 +41,8 @@ const files = {
         height: '400px',
         icon: icons.desktop.movieBaloon,
         name: "ADVENTURA",
-        url: "https://www.youtube.com/embed/_lI--gszA5s?feature=share",
-        type: "yt",
+        url: "./assets/docs/videos/ADVENTURA.raw Short.mp4",
+        type: "video",
         column: 1,
         row: 3,
         description: "ADVENTURA.RAW foi um projeto realizado para os artistas tiotiguito e Melohmy.",
@@ -42,8 +51,8 @@ const files = {
     file4: {
         icon: icons.desktop.movieBaloon,
         name: "OBJETO 708",
-        url: "https://www.youtube.com/embed/ZYakVz38Ros",
-        type: "yt",
+        url: "./assets/docs/videos/OBJETO 708 Short.mp4",
+        type: "video",
         column: 1,
         row: 4,
         description: "",
@@ -87,13 +96,50 @@ const files = {
           textarea.setAttribute('resize','none');
         },
 
-/*
-<div class="group" style="width: 200px">
-  <label for="text32">Additional notes</label>
-  <textarea id="text32" rows="8"></textarea>
-</div>
-*/
     } 
+}
+
+const navbarItems = {
+    name: "Zunno",
+    l1: "Documents",
+    l2: "Pictures",
+    l3: "Music",
+    l4: "Games",
+    l5: "Computer",
+    l6: "Control Panel",
+    l7: "Devices and Printers",
+    l8: "Default Programs",
+    l9: "Help and Support"
+}
+
+const navbarList = {
+  l1: { name: "Paint",
+        icon: icons.desktop.paint
+      },
+  l2: { name: "Notepad",
+        icon: icons.desktop.notepad
+      },
+  l3: { name: "Windows Media Center",
+        icon: 
+      },
+  l4: { name: "Windows Media Player",
+        icon: icons.desktop.mediaPlayer
+      },
+  l5: { name: "Calculator",
+        icon: icons.desktop.calculator
+      },
+  l6: { name: "Trash",
+        icon: icons.desktop.trash
+      },
+  l7: { name: "File Explorer",
+        icon: icons.desktop.explorer
+      },
+  l8: { name: "Control Panel",
+        icon: icons.desktop.controlPanel
+      },
+  l9: { name: "Command Prompt",
+        icon: icons.desktop.commandPrompt
+      },
 }
 /*
 

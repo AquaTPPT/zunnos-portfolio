@@ -24,7 +24,7 @@ for (const file of Object.entries(files)) {
     fileImg.addEventListener("click", function() { div.classList.add("selected");
         if (div.classList.contains("selected") ) {
             switch (file[1].type) {
-                case "yt":
+                case "video":
                     createWindow(null, null, file[1].name, null, createYtWindow(file[1].url), file[1].description);
                     break;
                 case "app":

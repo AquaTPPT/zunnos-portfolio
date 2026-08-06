@@ -43,7 +43,7 @@ function createWindow(width = 'fit-content', height = 'fit-content', windowText,
         let shiftY = event.clientY - wind.getBoundingClientRect().top;
 
         wind.style.zIndex = 1000;
-        document.body.append(wind);        
+        document.body.append(wind);   
         
         moveAt(event.pageX, event.pageY);
 
